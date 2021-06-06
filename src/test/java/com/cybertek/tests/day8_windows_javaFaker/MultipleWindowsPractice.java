@@ -52,7 +52,7 @@ public class MultipleWindowsPractice {
 
             if(driver.getTitle().contains("Etsy")){
                 Assert.assertTrue(driver.getTitle().contains("Etsy"));
-                break;;
+                break;
             }
         }
     }

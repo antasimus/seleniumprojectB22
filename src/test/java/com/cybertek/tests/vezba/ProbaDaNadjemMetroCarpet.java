@@ -21,7 +21,7 @@ public class ProbaDaNadjemMetroCarpet {
         //driver.findElement(By.partialLinkText("section-layout")).getAttribute("id");
         //driver.findElement(By.partialLinkText("section-layout")).getAttribute("class");
         //driver.findElement(By.partialLinkText("section-layout")).getAttribute("href");
-        List<WebElement> listOfLinks = driver.findElements(By.xpath("//body//a"));
+        List<WebElement> listOfLinks = driver.findElements(By.xpath("//a"));
 
         for(WebElement each: listOfLinks){
             System.out.println(each.getText());
