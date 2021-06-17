@@ -30,6 +30,7 @@ public class ConfigurationReader {
 
     //USE THE ABOVE CREATED LOGIC TO CREATE A RE-USABLE STATIC METHOD
     public static String getProperty(String keyWord){
+
         return properties.getProperty(keyWord);
     }
 }
