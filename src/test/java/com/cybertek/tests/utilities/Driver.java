@@ -41,7 +41,13 @@ public class Driver {
                     driver = new OperaDriver();
                     driver.manage().window().maximize();
                     driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+                    break;
+
             }
         }
+        /*
+        Same driver instance will be returned every time we call Driver.getDriver();method
+         */
+        return driver;
     }
 }
