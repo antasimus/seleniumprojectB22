@@ -7,10 +7,13 @@ import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.opera.OperaDriver;
 
 import java.util.concurrent.TimeUnit;
-
+/*
+Creating the private constructor so this class object is not reachable from outside
+ */
 public class Driver {
     /*
-    Creating the private constructor so this class object is not reachable from outside
+    Making our 'driver' instance private so that it is not reachable from outside of the class.
+    We make it static, because we want it to run before everything else, and also we will use it in a static method
      */
     private Driver() {}
     /*
@@ -25,17 +28,23 @@ public class Driver {
             We read our browse type from configuration properties using our getProperty method we creating in ConfigurationProperties
              */
             String browserType = ConfigurationReader.getProperty("browser");
+              /*
+            Depending on the browser type our switch statement will determine
+            to open specific type of browser/driver
+             */
             switch (browserType){
                 case "chrome":
                     WebDriverManager.chromedriver().setup();
                     driver = new ChromeDriver();
                     driver.manage().window().maximize();
                     driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+                    break;
                 case "firefox":
                     WebDriverManager.firefoxdriver().setup();;
                     driver = new FirefoxDriver();
                     driver.manage().window().maximize();
                     driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+                    break;
                 case "opera":
                     WebDriverManager.operadriver().setup();
                     driver = new OperaDriver();
@@ -50,4 +59,12 @@ public class Driver {
          */
         return driver;
     }
+
+    public static void closeDriver(){
+        if(driver!=null){
+            driver.quit();
+            driver=null;
+        }
+    }
 }
+
