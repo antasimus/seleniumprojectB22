@@ -1,8 +1,8 @@
 package com.cybertek.tests.day9_properties_browser_util;
 
-import com.cybertek.tests.utilities.BrowserUtils;
-import com.cybertek.tests.utilities.ConfigurationReader;
-import com.cybertek.tests.utilities.WebDriverFactory;
+import com.cybertek.utilities.BrowserUtils;
+import com.cybertek.utilities.ConfigurationReader;
+import com.cybertek.utilities.WebDriverFactory;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;

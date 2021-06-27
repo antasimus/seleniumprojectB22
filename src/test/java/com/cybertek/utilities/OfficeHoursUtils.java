@@ -1,4 +1,4 @@
-package com.cybertek.tests.utilities;
+package com.cybertek.utilities;
 
 import com.github.javafaker.Faker;
 import org.openqa.selenium.Alert;

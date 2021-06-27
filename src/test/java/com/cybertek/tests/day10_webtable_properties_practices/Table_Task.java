@@ -1,8 +1,8 @@
 package com.cybertek.tests.day10_webtable_properties_practices;
 
 import com.cybertek.tests.base.TestBase;
-import com.cybertek.tests.utilities.ConfigurationReader;
-import com.cybertek.tests.utilities.TableUtils;
+import com.cybertek.utilities.ConfigurationReader;
+import com.cybertek.utilities.TableUtils;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.testng.Assert;

@@ -1,7 +1,7 @@
 package com.cybertek.tests.day12_actions_upload_jsexecutor;
 
-import com.cybertek.tests.utilities.BrowserUtils;
-import com.cybertek.tests.utilities.Driver;
+import com.cybertek.utilities.BrowserUtils;
+import com.cybertek.utilities.Driver;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.testng.Assert;
